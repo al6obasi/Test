@@ -1,12 +1,11 @@
-
 <div class="container">
 <br><br>
-<form role="form" (submit)="login()">
+<form role="form" (submit)="signup()">
 <div class="row">
      <div class="col-md-4"></div>
     <div class="col-md-4 titlesign">
     
-      <h2 class="hsign">Please Sign in</h2>
+      <h2 class="hsign">Please Sign Up</h2>
       </div>
       <div class="col-md-4"></div>
       </div>
@@ -19,10 +18,7 @@
            <input type="text" name="username"  class="form-control input-lg" placeholder="User Name" tabindex="1"
            [(ngModel)]="username" required>              
           </div>
-          <div class="form-group">
-           <input type="email" name="username"  class="form-control input-lg" placeholder="Email" tabindex="1"
-           [(ngModel)]="email" required>              
-          </div>
+
         </div>
         <div class="col-md-3"></div>
       </div>
@@ -36,14 +32,24 @@
              placeholder="Password" tabindex="5"
              [(ngModel)]="password" required>
           </div>
+          <div class="form-group">
+            <input type="email" name="email"  
+            class="form-control input-lg"
+             placeholder="email" tabindex="5"
+             [(ngModel)]="email" required>
+          </div>          
         </div>
         <div class="col-md-3"></div>
       </div>
       <div class="row">
       <div class="col-md-3"></div>
-        <div class="col-xs-12 col-md-6 center">
+        <div class="col-md-3"></div>
+      </div>
+      <div class="row">
+      <div class="col-md-3"></div>
+        <div class="col-xs-12 col-md-6">
         <button 
-        class="btn btn-success btn-block btn-lg" type="submit">Sign In</button>
+        class="btn btn-success btn-block btn-lg" type="submit">Sign Up</button>
          <h3><span class="error" *ngIf="message">{{message}}!!</span></h3>
          <hr class="colorgraph">
         </div>
@@ -51,4 +57,3 @@
       </div>
        </form>
   </div>
-

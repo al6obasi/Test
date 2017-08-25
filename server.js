@@ -15,10 +15,10 @@ app.listen(3000, function () {
 //=============================================================================
 let mongoose = require ('mongoose');
 let mongoURI = 'mongodb://127.0.0.1/Test_MediaCorp';
-	mongoose.connect(mongoURI);
-	db = mongoose.connection;
+mongoose.connect(mongoURI);
+db = mongoose.connection;
 
-	db.once('open',function () {
-		console.log('... mongoDB  Test_MediaCorp  is open');
-	});
+db.once('open',function () {
+	console.log('... mongoDB  Test_MediaCorp  is open');
+});
 
